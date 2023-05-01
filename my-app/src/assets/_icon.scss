@@ -1,0 +1,16 @@
+.v-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  &.call {
+    width: 15px;
+    height: 15px;
+    background-image: url("./popular-icon/call.svg");
+  }
+  &.mail {
+    width: 15px;
+    height: 15px;
+    background-image: url("./popular-icon/mail.svg");
+  }
+}

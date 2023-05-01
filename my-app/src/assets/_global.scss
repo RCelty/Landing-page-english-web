@@ -1,0 +1,10 @@
+@import "color";
+@import "icon";
+@import "vuetify";
+@import "utilities";
+
+html:not(.mac)::-webkit-scrollbar,
+html:not(.mac) *::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
