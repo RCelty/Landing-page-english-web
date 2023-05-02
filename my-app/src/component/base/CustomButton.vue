@@ -25,7 +25,7 @@ export default {
     minWidth: null,
     btnClass: "",
     block: false,
-    type: "button"
+    type: { type: String, default: "button" }
   },
   computed: {
     bindClass() {
