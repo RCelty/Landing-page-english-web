@@ -29,19 +29,41 @@
         </div>
       </div>
     </div>
+    <div class="custom-navbar d-flex justify-center">
+      <div class="custom-container d-flex align-center full-width justify-center">
+        <v-row no-gutters>
+          <v-col v-for="item in  NAVBAR_ITEMS " :key="item.title" cols="auto" class="custom-navbar-item">
+            <drop-down-menu :items="item.children || []" open-on-hover>
+              <template #activator="{ on, attrs }">
+                <div v-on="on" v-bind="attrs" style="height: 3.5rem;" class="d-flex align-center"
+                  :class="{ 'dropdown-arrow-append': item.children && item.children.length > 0 }">{{
+                    item.title }}
+                </div>
+              </template>
+            </drop-down-menu>
+          </v-col>
+        </v-row>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import TextField from "@/component/base/TextField.vue";
 import CustomButton from "@/component/base/CustomButton.vue";
+import DropDownMenu from "@/component/base/DropDownMenu.vue";
 //
 import { mapGetters } from "vuex";
+import { NAVBAR_ITEMS } from "@/constant/common"
 
 export default {
   components: {
     TextField,
-    CustomButton
+    CustomButton,
+    DropDownMenu
   },
+  data: () => ({
+    NAVBAR_ITEMS
+  }),
   computed: {
     ...mapGetters("general", {
       hotline: "getHotline",
@@ -58,6 +80,13 @@ export default {
         border-radius: 0.375rem !important;
       }
     }
+  }
+}
+
+
+.menu-item:hover {
+  .v-list-item__title {
+    color: $primary;
   }
 }
 </style>
@@ -78,10 +107,6 @@ export default {
 
   img {
     width: 8.3125rem;
-  }
-
-  .custom-container {
-    max-width: 75%;
   }
 
   .contact-info {
@@ -115,6 +140,36 @@ export default {
 
   .custom-search {
     max-width: 14rem;
+  }
+}
+
+.custom-navbar {
+  .custom-navbar-item {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    &:hover {
+      color: $primary;
+
+      .dropdown-arrow-append {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .custom-container {
+    max-width: 960px
+  }
+}
+
+@media(min-width: 1260px) {
+  .custom-container {
+    max-width: 1140px
   }
 }
 </style>
