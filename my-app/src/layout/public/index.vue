@@ -1,13 +1,6 @@
 <template>
   <v-app>
     <PublicHeader />
-    <div class="d-flex justify-center">
-      <DropDownMenu :items="menu" open-on-hover style="width: fit-content;">
-        <template #activator="{ on, attrs }">
-          <div v-on="on" v-bind="attrs">Menu</div>
-        </template>
-      </DropDownMenu>
-    </div>
     <div>
       <router-view />
     </div>
