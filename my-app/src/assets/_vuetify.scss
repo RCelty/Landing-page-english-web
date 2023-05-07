@@ -1,0 +1,40 @@
+.v-application {
+  .primary {
+    border-color: $primary !important;
+    background-color: $primary !important;
+  }
+  .primary--text {
+    color: $primary !important;
+    caret-color: $primary !important;
+  }
+}
+
+//Text Field
+.custom-textfield {
+  .v-text-field--outlined {
+    fieldset {
+      border-color: rgba(34, 34, 34, 0.1);
+    }
+    &.v-input--is-focused {
+      fieldset {
+        border-width: 1px !important;
+        border-color: $primary !important;
+      }
+    }
+  }
+  .v-text-field.v-input--hide-details {
+    .v-input__control {
+      min-height: unset !important;
+      .v-input__slot {
+        min-height: unset !important;
+      }
+    }
+  }
+}
+
+//Button
+.custom-button {
+  .v-btn {
+    text-transform: unset !important;
+  }
+}
