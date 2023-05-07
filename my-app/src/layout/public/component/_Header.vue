@@ -160,16 +160,4 @@ export default {
     }
   }
 }
-
-@media(min-width: 992px) {
-  .custom-container {
-    max-width: 960px
-  }
-}
-
-@media(min-width: 1260px) {
-  .custom-container {
-    max-width: 1140px
-  }
-}
 </style>

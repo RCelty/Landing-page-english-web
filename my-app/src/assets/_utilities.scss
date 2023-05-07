@@ -7,9 +7,19 @@
   color: $white1 !important;
 }
 
+//Font weight
+.font-weight--600 {
+  font-weight: 600 !important;
+}
+
 //Border
 .border-radius--small {
   border-radius: 0.375rem !important;
+}
+
+//Cursor
+.cursor--pointer {
+  cursor: pointer !important;
 }
 
 //Others
