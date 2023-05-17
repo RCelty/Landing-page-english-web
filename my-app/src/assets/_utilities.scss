@@ -3,18 +3,38 @@
 }
 
 //Text
+.primary--text {
+  color: $primary !important;
+}
 .white1--text {
   color: $white1 !important;
 }
+.blue1--text {
+  color: $blue1 !important;
+}
+
+//Font size
+.font-size--h1 {
+  font-size: 2.5rem !important;
+}
 
 //Font weight
+.font-weight--normal {
+  font-weight: normal !important;
+}
 .font-weight--600 {
   font-weight: 600 !important;
+}
+.font-weight--700 {
+  font-weight: 700 !important;
 }
 
 //Border
 .border-radius--small {
   border-radius: 0.375rem !important;
+}
+.border-radius--8px {
+  border-radius: 8px !important;
 }
 
 //Cursor
@@ -35,4 +55,19 @@
   margin-left: 0.5rem;
   margin-top: -0.28571em;
   transition: none;
+}
+
+.custom-divider {
+  margin: 1.5rem auto;
+  background-color: $gray2;
+  opacity: 1;
+}
+
+.number-1-plus:after {
+  content: "+";
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+  font-size: 45%;
+  top: -1em;
 }
