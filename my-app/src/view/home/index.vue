@@ -3,7 +3,7 @@
     <div class="section section-hero">
       <img :src="require('@/assets/png/banner_web2.jpg')" alt="section_banner" />
     </div>
-    <div class="section section-1">
+    <div class="section section-1 pt-0">
       <div class="d-flex justify-center">
         <div class="custom-container align-center full-width text-start font-weight--600">
           <p>Khám phá hệ thống các thương hiệu con</p>
@@ -71,6 +71,20 @@
         </div>
       </div>
     </div>
+    <div class="section section-2">
+      <div class="d-flex justify-center">
+        <div class="custom-container align-center full-width">
+          <h2 class="section-title mb-2 text-center font-weight--700" style="text-transform: uppercase; font-size: 2rem;">
+            Lộ trình tự học
+            <span style="color: red;">
+              800+ TOEIC
+              <br />
+              Độc quyền
+            </span>
+          </h2>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -92,8 +106,20 @@ export default {
   }
 }
 
+.section {
+  padding: 4.5rem 0;
+}
+
 .section-1 {
   margin-top: -10.25rem
+}
+
+.section-2 {
+  background-color: $white3;
+}
+
+.section-title {
+  color: $blue2;
 }
 
 hr {
